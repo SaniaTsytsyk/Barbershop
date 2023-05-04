@@ -1,0 +1,76 @@
+.about .container {
+   display: flex;
+   column-gap: 30px;
+}
+
+.picture__list {
+   display: none;
+   @include tablet {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+   }
+   @include desktop {
+      display: flex;
+      column-gap: 30px;
+   }
+}
+
+.about__content {
+   max-width: 470px;
+}
+
+.about__pre-title {
+   color: var(--second-title-color);
+   margin-bottom: 20px;
+}
+
+.about__title {
+   font-family: 'Raleway', sans-serif;
+   @include font (700, 28px, 1.62, 0.02em);
+   color: var(--second-title-color);
+   margin-bottom: 20px;
+   width: 306px;
+   @include tablet {
+      width: 330px;
+   }
+   @include desktop {
+      width: 470px;
+      font-size: 42px;
+      line-height: 1.16;
+   }
+}
+
+.about__after-title {
+   @include font (null, 16px, 1.62, 0.02em);
+   color: #555555;
+   margin-bottom: 20px;
+   width: 418px;
+   @include tablet {
+      width: 330px;
+      font-size: 18px;
+      line-height: 1.66;
+   }
+   @include desktop {
+      width: 470px;
+   }
+}
+
+.about__text {
+   @include font (null, 14px, 1.86, 0.02em);
+   color: #555555;
+   margin-bottom: 40px;
+   width: 415px;
+   @include tablet {
+      width: 330px;
+      margin-bottom: 23px;
+   }
+   @include desktop {
+      width: 470px;
+      margin-bottom: 42px;
+   }
+}
+
+.about__btn {
+   color: var(--second-title-color);
+}

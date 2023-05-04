@@ -1,0 +1,13 @@
+.pre-title {
+      @include font (600, 11px, 1.36, 0.1em);
+      text-transform: uppercase;
+      @extend %align-list;
+      gap: 20px;
+      &::before {
+      content: '';
+      width: 60px;
+      height: 1px;
+      background-color: currentColor;
+      }
+}
+

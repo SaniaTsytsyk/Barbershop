@@ -1,0 +1,39 @@
+.contact-wrap {
+      background-color: #171A24;
+      background-image: url(../img/bg-contacts-mob.png);
+      background-repeat: no-repeat;
+      // background-position: right;
+      // background-size: calc(50% - 15px) 100%;
+      background-size: calc(100% / 50%) 100%;
+      background-position: center;
+      max-width: 1600px;
+      margin: 0 auto;
+      @include retina {
+                  background-image: url(../img/bg-contacts-mob-2x.png);
+            }
+      
+            @include tablet {
+      
+                  background-image: url(../img/bg-contacts-tab.png);
+      
+                  @include retina {
+                        background-image: url(../img/bg-contacts-tab-2x.png);
+                  }
+            }
+      
+            @include desktop {
+      
+                  background-image: url(../img/bg-contacts.png);
+      
+                  @include retina {
+                        background-image: url(../img/bg-contacts-2x.png);
+                  }
+            }
+      @include desktop {
+            background-position: right;
+                  background-size: calc(50% - 15px) 100%;
+                  & .container {
+                              display: flex;
+                        }
+      }
+}

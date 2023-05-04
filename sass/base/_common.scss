@@ -1,0 +1,28 @@
+body {
+   font-family: "Open Sans", sans-serif;
+}
+
+body.modal-open {
+   overflow: hidden;
+}
+
+.list {
+   list-style: none;
+}
+
+.link {
+   text-decoration: none;
+}
+
+.section {
+   padding-top: 84px;
+   padding-bottom: 84px;
+   @media screen and (min-width: 768px) {
+      padding-top: 100px;
+      padding-bottom: 106px;
+   }
+      @media screen and (min-width: 1199px) {
+         padding-top: 120px;
+         padding-bottom: 120px;
+      }
+}

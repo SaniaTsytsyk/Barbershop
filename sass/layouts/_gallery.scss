@@ -1,0 +1,23 @@
+.gallery-pre-title {
+   color: var(--second-title-color);
+   margin-bottom: 70px;
+   @include tablet {
+      margin-bottom: 40px;
+   }
+}
+
+.gallery-list {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px;
+}
+
+.gallery-item {
+   width: 100%;
+   @include tablet {
+      width: calc((100% - 30px) / 2);
+   }
+            @include desktop {
+         width: calc((100% - 90px) / 4);
+      }
+}

@@ -1,0 +1,24 @@
+.footer {
+   display: flex;
+   height: 127px;
+}
+
+.footer-list {
+   transform-origin: bottom left;
+   align-items: center;
+   gap: 40px;
+   margin-left: auto;
+}
+
+.copyright {
+   font-style: normal;
+   @include font (600, 11px, 1.36, 0.2em);
+   margin-top: 79px;
+   color: #9DA4BD;
+   @include tablet {
+      margin-top: 56px;
+   }
+   @include desktop {
+      margin-top: 56px;
+   }
+}

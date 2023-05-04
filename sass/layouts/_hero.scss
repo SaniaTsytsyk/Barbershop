@@ -1,0 +1,111 @@
+.hero .container {
+   display: flex;
+   padding: 0;
+   width: 100%;
+   @include tablet {
+      padding-left: 39px;
+   }
+   @include desktop {
+      width: 1200px;
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+}
+
+.soc {
+   display: none;
+   @include tablet {
+      width: 100px;
+         display: flex;
+         align-items: flex-end;
+         padding-left: 27px;
+         padding-bottom: 40px;
+   }
+}
+
+.soc__list {
+   transform: rotate(-90deg) translateY(100%);
+   transform-origin: bottom left;
+   @extend %align-list;
+   gap: 40px;
+   &::before {
+         content: '';
+         width: 60px;
+         height: 1px;
+         background-color: var(--second-title-color);
+      }
+}
+
+.soc__link {
+   @include font (600, 11px, 1.36, 0.2em);
+   color: var(--second-title-color);
+   transition: color 300ms linear;
+   &:hover,
+      &:focus {
+         color: var(--accent-color);
+      }
+}
+
+.hero__content {
+   background-color: #303030;
+   background-image: var(--bg-gradient), url(../img/slider-img-mob.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   padding: 210px 30px;
+   flex-grow: 1;
+   @include retina { 
+      background-image: var(--bg-gradient), url(../img/slider-img-mob-2x.jpg);
+   }
+   @include tablet {
+      padding: 272px 111px 237px 124px;
+      background-image: var(--bg-gradient), url(../img/slider-img-tab.jpg);
+      @include retina {
+            background-image: var(--bg-gradient), url(../img/slider-img-tab-2x.jpg);
+         }
+   }
+      @include desktop {
+         padding: 272px 100px 206px 100px;
+         background-image: var(--bg-gradient), url(../img/slider-img-desk.jpg);
+         @include retina {
+               background-image: var(--bg-gradient), url(../img/slider-img-desk-2x.jpg);
+            }
+      }
+}
+
+.hero__pre-title {
+   color: rgba(157, 164, 189, 0.6);
+   margin-bottom: 20px;
+}
+
+.hero__title {
+   font-family: 'Raleway', sans-serif;
+   @include font (700, 40px, 1.18, 0.05em);
+   color: var(--main-title-color);
+   margin-bottom: 20px;
+   display: flex;
+   align-items: baseline;
+   @include mobile {
+      font-size: 48px;
+   }
+      @include desktop {
+         font-size: 72px;
+      }
+}
+
+.hero__after-title {
+   @include font (null, 16px, 1.62, 0.02em);
+   color: #9DA4BD;
+
+   @include mobile {
+      max-width: 336px;
+   }
+   @include tablet {
+      font-size: 18px;
+      line-height: 1.67;
+      max-width: 370px;
+   }
+   @include desktop {
+      max-width: 360px;
+   }
+}

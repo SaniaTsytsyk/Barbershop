@@ -1,0 +1,60 @@
+.contacts {
+   // padding-bottom: 120px;
+   
+   // padding-bottom: 184px;
+   // width: calc(50% - 15px);
+   // padding-left: 100px;
+   @include desktop {
+      padding-bottom: 120px;
+      
+         padding-bottom: 184px;
+         width: calc(50% - 15px);
+         padding-left: 100px;
+   }
+}
+
+.contacts-title {
+   @include font (700, 42px, 1.16, 0.05em);
+   color: var(--main-title-color);
+   margin-bottom: 40px;
+}
+
+.contacts-address {
+   margin-bottom: 70px;
+}
+
+.contacts-address-link {
+   @include font (700, 18px, 1.67, 0.02em);
+   color: #9DA4BD;
+   display: block;
+   margin-bottom: 20px;
+}
+
+.contacts-link {
+   @include font (null, 18px, 1.67, 0.02em);
+   color: #9DA4BD;
+   margin-bottom: 20px;
+   display: block;
+}
+
+.contact-icon {
+   vertical-align: middle;
+   fill: currentColor;
+   margin-right: 16px;
+}
+
+.contacts-item:not(:last-child) {
+   margin-bottom: 20px;
+}
+
+.contacts-time-title {
+   @include font (600, 11px, 1.36, null);
+   text-transform: uppercase;
+   color: var(--main-title-color);
+   margin-bottom: 20px;
+}
+
+.contacts-time-text {
+   @include font (null, 18px, 1.67, 0.02em);
+   color: #9DA4BD;
+}
