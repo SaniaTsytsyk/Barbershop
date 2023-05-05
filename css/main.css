@@ -37,10 +37,15 @@ img {
 
 body {
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body.modal-open {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .list {
@@ -704,7 +709,7 @@ body.modal-open {
   letter-spacing: 0.02em;
   color: #555555;
   margin-bottom: 40px;
-  width: 415px;
+  width: 410px;
 }
 @media screen and (min-width: 768px) {
   .about__text {
@@ -829,8 +834,14 @@ body.modal-open {
   height: 1px;
   background-color: rgba(157, 164, 189, 0.12);
   flex-grow: 1;
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .table__item::after {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .table__item:last-child {
@@ -839,7 +850,7 @@ body.modal-open {
 }
 
 .table__text {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.43;
   letter-spacing: 0.02em;
   color: #9DA4BD;
