@@ -434,20 +434,24 @@ body.modal-open {
 
 .mob-menu {
   position: fixed;
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
   top: 0;
   right: 0;
-  width: 337px;
+  width: 100%;
   height: 100vh;
   padding-top: 48px;
   padding-bottom: 48px;
 }
 .mob-menu > .container {
+  background-color: white;
   height: 100%;
-  display: flex;
+  width: 280px;
+  top: 0;
+  right: 0;
   flex-direction: column;
   justify-content: space-between;
+  position: absolute;
 }
 @media screen and (min-width: 768px) {
   .mob-menu {
@@ -457,13 +461,17 @@ body.modal-open {
 
 .menu-close__btn {
   display: block;
-  margin-left: 270px;
+  margin-left: auto;
   margin-bottom: 30px;
   background-color: transparent;
 }
 
 .mob-menu__item:not(:last-child) {
   margin-bottom: 24px;
+}
+
+.mob-menu-list {
+  margin-bottom: 90px;
 }
 
 .mob-menu__link {
@@ -481,7 +489,7 @@ body.modal-open {
 }
 
 .mob-connect {
-  margin-bottom: 69px;
+  margin-bottom: 75px;
 }
 
 .mob-connect__tel {
@@ -499,6 +507,7 @@ body.modal-open {
 }
 
 .mob-connect__btn {
+  color: black;
   display: block;
   margin-top: 24px;
 }
