@@ -1,3 +1,40 @@
+.btn-up {
+   position: fixed;
+   background-color: rgba(0, 0, 0, 0.464);
+   right: 20px;
+   bottom: 0px;
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+   z-index: 1;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 60px;
+   height: 50px;
+   transition: background-color 300ms linear;
+}
+
+.btn-up::before {
+   content: "";
+   width: 40px;
+   height: 40px;
+   background: transparent no-repeat center center;
+   background-size: 100% 100%;
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+}
+
+.btn-up_hide {
+   display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+   .btn-up:hover,
+   .btn-up:focus {
+      background-color: var(--accent-color);
+   }
+}
+
 .header {
    position: absolute;
    width: 100%;
@@ -9,8 +46,15 @@
 }
 
 .header__logo {
-   margin-right: 130px;
+   @include tablet {
+      margin-right: 58px;
+   }
+   @include desktop {
+      margin-right: 130px;
+   }
 }
+
+
 
 .navigation {
    display: none;
@@ -39,13 +83,19 @@
    margin-left: auto;
    display: none;
    @include tablet {
-         display: block;
+         display: flex;
+            flex-direction: column-reverse;
+            gap: 20px;
+            align-items: inherit;
+      }
+      @include desktop {
+         flex-direction: row;
+         gap: 43px;
       }
 }
 
 .connect__btn {
    color: var(--main-title-color);
-   margin-left: 30px;
 }
 
 .menu-open__btn {
@@ -90,7 +140,7 @@
 
 .menu-close__btn {
    display: block;
-   margin-left: 200px;
+   margin-left: 270px;
    margin-bottom: 30px;
    background-color: transparent;
 }
@@ -105,7 +155,7 @@
    line-height: 1.38;  
    letter-spacing: 0.1em;
    color: #303030;
-   transition: color 300ms linear;
+   transition: color 200ms linear;
 }
 
 .mob-menu__link:hover,
@@ -123,7 +173,7 @@
    line-height: 1.38;
    letter-spacing: 0.1em;
    color: #303030;
-   transition: color 300ms linear;
+   transition: color 200ms linear;
 }
 
 .mob-connect__tel:hover,

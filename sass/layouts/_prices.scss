@@ -108,7 +108,7 @@
 }
 
 .table__text {
-   @include font (null, 15px, 1.43, 0.02em);
+   @include font (400, 14px, 1.43, 0.02em);
    color: #9DA4BD;
    
    &:last-child {
