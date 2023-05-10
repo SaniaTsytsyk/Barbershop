@@ -784,7 +784,6 @@ body.modal-open {
   background-image: url(../img/prices-bg-mob.png);
   background-repeat: no-repeat;
   background-position: center;
-  block-size: cover;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -1349,7 +1348,6 @@ body.modal-open {
   background-color: #171A24;
   background-image: url(../img/bg-contacts-mob.png);
   background-repeat: no-repeat;
-  background-size: 2 100%;
   background-position: center;
   max-width: 1600px;
   margin: 0 auto;
